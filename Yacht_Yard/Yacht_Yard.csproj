@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87DB0151-5F83-4536-A2A6-202B25B2AEA2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Yacht_Yard</RootNamespace>
+    <AssemblyName>Yacht_Yard</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessory.cs" />
+    <Compile Include="AccToBoats.cs" />
+    <Compile Include="Boat.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="Model1.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderDetails.cs" />
+    <Compile Include="Partner.cs" />
+    <Compile Include="SalesPerson.cs" />
+    <Compile Include="sysdiagrams.cs" />
+    <Compile Include="YachtYard-Cost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YachtYard-Cost.Designer.cs">
+      <DependentUpon>YachtYard-Cost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YachtYard-Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YachtYard-Menu.Designer.cs">
+      <DependentUpon>YachtYard-Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YachtYard-Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YachtYard-Product.Designer.cs">
+      <DependentUpon>YachtYard-Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YachtYard-User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YachtYard-User.Designer.cs">
+      <DependentUpon>YachtYard-User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="YachtYard-Cost.resx">
+      <DependentUpon>YachtYard-Cost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YachtYard-Menu.resx">
+      <DependentUpon>YachtYard-Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YachtYard-Product.resx">
+      <DependentUpon>YachtYard-Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YachtYard-User.resx">
+      <DependentUpon>YachtYard-User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Accessory.datasource" />
+    <None Include="Properties\DataSources\AccToBoats.datasource" />
+    <None Include="Properties\DataSources\Boat.datasource" />
+    <None Include="Properties\DataSources\Contract.datasource" />
+    <None Include="Properties\DataSources\Customer.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Invoice.datasource" />
+    <None Include="Properties\DataSources\Model1.datasource" />
+    <None Include="Properties\DataSources\Order.datasource" />
+    <None Include="Properties\DataSources\OrderDetails.datasource" />
+    <None Include="Properties\DataSources\Partner.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SalesPerson.datasource" />
+    <None Include="Properties\DataSources\sysdiagrams.datasource" />
+    <None Include="Properties\DataSources\YachtYard_User.datasource" />
+    <None Include="Properties\DataSources\Yacht_Yard.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Yacht_Yard.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
