@@ -24,7 +24,7 @@ namespace Yacht_Yard
         }
         private void bNazad_Click(object sender, EventArgs e)
         {
-            Form1 pmf = new Form1();
+            Form1 pmf = new Form1(); // возвращение к меню
             pmf.Show();
             Hide();
         }
